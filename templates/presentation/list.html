@@ -1,0 +1,62 @@
+{% extends "dashboard.html" %} {% block content %}
+<h3>Python Kullanım Alanları</h3>
+<p>
+    <ul>
+        <br>
+        <li> Rest API'si oluşturma </li>
+        <p>
+            Python bir rest API'si oluşturmak için çok sık kullanılan bir dil. Flask, eve veya Django gibi frameworkler sayesinde çok
+            kısa bir zamanda web servisinizi kullanıma hazır hale getirebilirsiniz.
+        </p>
+        <br>
+
+        <li>Machine Learning</li>
+        <p>
+            Machine Learning, bir veri üzerinden çeşitli algoritmalar yardımıyla birşeyler öğrenme uğraşına verilen genel bir ad. Bunun
+            içine, sınıflandırma (spam tanıma, resim tanıma), regresyon (hisse fiyatları), bölümleme (müşteri grupları oluşturma),
+            gibi çeşitli alanlar giriyor. Python için yazılmış scikit-learn adında çok kapsamlı ve güçlü bir machine learning
+            kütüphanesi var. Machine Learning ile alakalı aklınıza gelebilecek her türlü algoritma tanımlanmış. Web sitelerinde
+            machine learning örnekleri de bulunmakta.
+        </p>
+        <br>
+
+        <li>Web Uygulamaları</li>
+        <p>
+            Web uygulaması (web sitesi de olabilir) geliştirme konusunda Python çokça tercih edilen bir dil. Python ile web geliştiriciliği
+            yapmış herkes Django'yu duymuş, hatta kullanmıştır. Django framework'ü içinde ihtiyaç duyabileceğiniz neredeyse
+            herşey dahil edilmiş. Ancak, web uygulamalarınızı geliştirmek için Django'ya bağlı kalmak zorunda değilsiniz.
+            Basit cgi programları yazmaktan, tüm bir server yazmaya kadar çok çeşitli şekillerde Python'u kullanabilirsiniz.
+        </p>
+        <br>
+
+        <li>Örümcek türü yazılımlar </li>
+        <p>
+            Python, web'i taramak ve veri toplamak için de çok uygun bir dil. Bu örümcek türü yazımlarınızı, biraz önce bahsettiğim Machine
+            Learning kütüphaneleriyle yan yana koyup, çok farklı uygulamalar geliştirebilirsiniz. Örneğin, google dediğiniz
+            şey de altı üstü bir örümcek ve bir Machine Learning uygulaması (ayrıca, devasa bir index) den oluşuyor.
+        </p>
+        <br>
+
+        <li> Veri Analizi</li>
+        <p>
+            Pandas kütüphanesi, yüksek performanslı kullanımı kolay veri yapıları ve veri analizi özellikleri sunuyor. Böylece, R veya
+            stata gibi istatistik programlarına ihtiyaç kalmadan, veri analizi ve modelleme yapabilirsiniz. IPython, statsmodels,
+            ve scikit-learn gibi araçlar ve kütüphanelerle bir arada kullanıldığında, performans ve üretkenlik açısında hayli
+            güçlü bir veri analizi ortamı elde edebilirsiniz.
+        </p>
+        <br>
+
+    </ul>
+</p>
+
+<div class="row" style="margin-left:5px">
+    {% for object in object_list %}
+    <div class="well well-sm">
+        <b>
+            <a href="{{ object.get_absolute_url }}">{{ object.title }}</a>
+        </b>
+        <p>{{ object.description|truncatechars:100 }}...</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}

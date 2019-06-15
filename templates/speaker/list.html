@@ -1,0 +1,72 @@
+{% extends "dashboard.html" %} {% load staticfiles %} {% block content %}
+<h3>Örnek Uygulamalar</h3>
+<p>
+  <h6>Girilen 2 Sayının Ortalamasını Bulan Python Örneği:</h6>
+  <ul>
+    <li> sayi1 = input('1. Sayı : ') </li>
+    <li> sayi2 = input('1. Sayı : ')</li>
+    <li> ortalama=(int(sayi1)+int(sayi2))/2 </li>
+    <li> print("Ortalama :{0} ".format(ortalama))</li>
+  </ul>
+  <br>
+  <br>
+
+  <h6>Girilen Vize ve Final Notu Ortalaması Hesaplayan Python Örneği:</h6>
+  <ul>
+    <li> vize = input('Vize Notunuz : ') </li>
+    <li> final = input('Final Notunuz : ')</li>
+    <li> ortalama=(float(vize)*0.4)+(float(final)*0.6) </li>
+    <li> print("Ortalama :{0} ".format(ortalama))</li>
+  </ul>
+  <br>
+  <br>
+
+  <h6>Girilen Sayının Tek mi Çift mi Olduğunu Bulan Python Örneği:</h6>
+  <ul>
+    <li> sayi = input('Sayı : ')</li>
+    <li> if(int(sayi)%2==0): print("Sayı Çift")</li>
+    <li> else: print("Sayı Tek") </li>
+  </ul>
+  <br>
+  <br>
+
+  <h6>1-100 arası Çift Sayıları Listeleyen Python Örneği:</h6>
+  <ul>
+    <li> for i in range(1,101):</li>
+    <li> if i%2==0: print(i)</li>
+  </ul>
+  <br>
+  <br>
+
+  <h6>Girilen metnin harflerini alt alta yazdıran Python Örneği:</h6>
+  <ul>
+    <li> isim=input("Adınızı Girin ")</li>
+    <li> sayac=0</li>
+    <li> while sayac
+      < len(isim):</li>
+        <li> print(isim[sayac]) sayac += 1</li>
+        <li> else: print("Adının harflerini listeledim.")</li>
+  </ul>
+  <br>
+  <br>
+</p>
+
+<div class="row">
+  {% for object in object_list %}
+  <div class="col-md-3">
+    <div class="thumbnail">
+      <img src="{% static " images/default.jpg " %}" width="300">
+      <div class="caption">
+        <h4>{{ object.get_fullname }}</h4>
+        <p>
+          <a href="{{ object.get_absolute_url}}" class="btn btn-primary" role="button">
+            Profiline Git
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% include "pagination.html" %} {% endblock content %}

@@ -1,0 +1,21 @@
+import os
+
+from settings import INSTALLED_APPS, MIDDLEWARE_CLASSES, BASE_DIR
+
+DEBUG = True
+TEMPLATE_DEBUG = True
+
+ALLOWED_HOSTS = ['*']
+
+INSTALLED_APPS += (
+    'debug_toolbar',
+    'django_extensions',
+)
+
+MIDDLEWARE_CLASSES += (
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
+)
+
+DEBUG_TOOLBAR_CONFIG = {
+    'DISABLE_PANELS': set(['debug_toolbar.panels.redirects.RedirectsPanel']),
+}

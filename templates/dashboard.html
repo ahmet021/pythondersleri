@@ -1,0 +1,91 @@
+{% extends "base.html" %} {% load staticfiles %} {% load url from future %} {% block body %}
+<div class="container" style="margin-top: 20px">
+  <div class="row demo-row">
+    <div class="col-xs-12">
+      <nav class="navbar navbar-inverse navbar-embossed" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+            <span class="sr-only">Toggle navigation</span>
+          </button>
+
+
+          <!-- <a class="navbar-brand" href="{% url 'home' %}">
+            <img src="{% static '/img/python.jpg' %}">
+          </a> -->
+
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse-01">
+          <ul class="nav navbar-nav navbar-left">
+            <li>
+              <a href="{% url 'home' %}">Python Nedir ?</a>
+            </li>
+            <!-- <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Kategoriler <b class="caret"></b></a>
+                  <span class="dropdown-arrow"></span>
+                  <ul class="dropdown-menu">
+                    {% for category in categories %}
+                        <li>
+                            <a href="{{ category.get_absolute_url }}">
+                                {{ category.name }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                  </ul>
+                </li> -->
+            <li>
+              <a href="{% url 'presentation-list' %}">Python Kullanım Alanları</a>
+            </li>
+            <li>
+              <a href="{% url 'speaker-list' %}">Örnek Uygulamalar </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  {% block content %}{% endblock content %}
+</div>
+
+<footer style="margin-top: 20px">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-7">
+        <h3 class="footer-title">
+          <h2>Hakkımızda</h2>
+        </h3>
+        <p>Özkan Software yazılım şirketi bir grup öğrenci tarafından 2018 yılında kurulmuştur. Asıl amacımız bu yolda projeler
+          yaparak kendimizi geliştirmek ve bunu yaparken de firma müşteri ilişkilerini en samimi şekilde gerçekleştirmeyi
+          hedeflemekteyiz. Şu anda 5 kişilik ekip ile yola çıkan şirketimiz mobil, web, e-ticaret uygulamaların yanında logo
+          ve grafik tasarım hizmetleri de vermektedir. Asıl amacımız yapacağımız Projeler ile ileri de iyi bir yazılım firması
+          olmaktır. Bu bölümde günümüzün çok kullanılan python programlama dili hakkında bilgi vermek istedik isterseniz
+          Web sitemizden bizi takip edebilirsiniz.
+          <br>
+          <br>
+          <p>
+            <h5>Web Sitemiz:
+              <a href="https://www.ozkansoftware.com/" target="_blank"> www.ozkansoftware.com</a>
+            </h5>
+
+          </p>
+        </p>
+      </div>
+
+      <div class="col-xs-5">
+        <div class="footer-banner">
+          <h3 class="footer-title">Sitemize Bulunan Örnek Uygulamalar</h3>
+          <ul>
+            <li>Girilen 2 Sayının Ortalamasını Bulan Python Örneği</li>
+            <li>Girilen Vize ve Final Notu Ortalaması Hesaplayan Python Örneği</li>
+            <li>Girilen Sayının Tek mi Çift mi Olduğunu Bulan Python Örneği</li>
+            <li>1-100 arası Çift Sayıları Listeleyen Python Örneği</li>
+            <li>Girilen metnin harflerini alt alta yazdıran Python Örneği</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+{% endblock body %}

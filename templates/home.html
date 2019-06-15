@@ -1,0 +1,35 @@
+{% extends "dashboard.html" %} {% load staticfiles %} {% load url from future %} {% block content %}
+<div class="jumbotron">
+    <h1>Python Nedir ?</h1>
+    <p>
+        Python, Guido Van rossum adlı hollandalı bir programcı tarafından yazılmış bir programlama dilidir. Geliştirilmesine 1990
+        yılında başlayan Python; C ve C++ gibi programlama dillerine kıyaslarsak şöyle sonuçlar elde edebiliriz.
+        <ul>
+            <li> Daha kolay öğrenilir. </li>
+            <li>Program geliştirme sürecini kısaltır yani hızlı yazılır.</li>
+            <li> Yukaridaki verilen programlama dillerine aksine ayrı bir derleyici ihtiyaci duymaz.</li>
+            <li> Hem daha okunaklı, hem daha temiz kodsal söz dizimine sahiptir. </li>
+        </ul>
+        <p> Python’un bu ve buna benzer özelliklerinden dolayı, dünya çapında ün sahibi büyük kuruluşlar ( Google, Yahoo! ve
+            Dropbox gibi) bünyelerinde herzaman Python programcılarına ihtiyaç duyuyor.</p>
+
+        <p>Mesela pek çok büyük şirketin Python bilen programcılara iş olanağı sunduğu, Python’un baş geliştiricisi Guido Van
+            Rossum‘un 2005 ile 2012 yılları arasında Google’de çaliştığını, 2012 yılının sonlarında doğru ise Dropbox şirketine
+            geçtiğini söylersek, bu programlama dilinin önemi ve geçerliliğini herhalde daha belirgin bir şekilde ortaya
+            çıkaracaktır.
+        </p>
+        <p>Bu arada Python dilinin, her nekadar Python Programlama dili ile ilgili çoğu görsel malzemeninn üzerine yılan resmi
+            olarak görsek de, Python kelimesi aslında çoğu kişinin zannetiği aksine Piton anlamına gelmiyor. Python programlama
+            dili ismini, Guido Van Rossum’un çok sevdiği Monty Python adlı altı kişilik bir ingiliz komedi grubun Monty Python’s
+            Flying Circus adlı gösterisinden gelmektedir.</p>
+
+    </p>
+    <p>
+        <a class="btn btn-primary btn-lg" href="{% url 'speaker-list' %}" role="button">
+            Örnek Uygulamalar
+        </a>
+    </p>
+</div>
+<div class="row">
+</div>
+{% endblock content %}
