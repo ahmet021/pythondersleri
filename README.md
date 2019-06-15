@@ -8,6 +8,6 @@
 
 **Migrationların yapılması ve Projenin çalıştırılması**
 
-    cd django-101/
+    cd pythondersleri/
     python manage.py migrate
     python manage.py runserver
