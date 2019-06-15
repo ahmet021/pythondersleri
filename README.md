@@ -6,11 +6,6 @@
     sudo pip install --upgrade pip
     sudo pip install --upgrade virtualenv
 
-**Virtualenv oluşturmak**
-
-    virtualenv env
-    source env/bin/activate
-
 **Migrationların yapılması ve Projenin çalıştırılması**
 
     cd django-101/
